@@ -4,7 +4,23 @@
   margin: 0px;
   padding: 0px;
 }
+.showcase p{
+  color: aqua;
+}
+
+.titulo{
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family:'Rubik Microbe', cursive;
+  color: #1ca6c9;
+  box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+  
+}
 body {
+  width: 100%;
+  margin: 0;
   background-color: black;
   color: white;
   background-color: #000000;
@@ -20,10 +36,6 @@ a {
 }
 ul {
   list-style: none;
-}
-.container {
-  width: 90%;
-  margin: auto;
 }
 /* estilos de navegacion */
 .nav-main {
@@ -70,7 +82,7 @@ border-radius: 20px;
 
 /* no-repeat center es para que la imagen este centrada y center/cover para que abarque toda la pantalla */
 background: url('./img/img2.jpg') no-repeat center center/cover;
-padding-bottom: 50px;
+padding: 50px;
 display: flex;
 /* flex-direction column ubica la columna de texto en la parte inferior de la imagen o seccion */
 flex-direction: column;
@@ -90,14 +102,15 @@ box-shadow: 0px 0px 20px black;
   border: 0px;
   font-weight: bold;
   padding: 10px 20px;
-  background: #1ca6c9;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(38, 161, 165));
   font-size: 15px;
   /* border para el borde del boton, debemos poner solid para que tome el contorno con la cantidad de pixeles de grosor */
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid rgb(53, 53, 53);
 }
 .btn:hover{
   box-shadow: 0px 5px 5px rgb(110, 210, 235);
+  color: #1ca6c9;
 }
 /* Seccion CARDS */
 
@@ -118,17 +131,18 @@ margin-top: 30px;
 border-radius: 20px;
 box-shadow: 0px 0px 20px black;
 }
+.new-cards p{
+  color: gray;
+}
 .imgHover:hover{
   box-shadow: 0px 0px 10px rgb(110, 210, 235);
   transform: scale(0.9);
 }
 .cards-banner-one{
-  width: 90%;
-  height: 350px;
-  background: url('./img/img44.jpg');
-  margin-bottom: 40px;
-  margin: auto;
-
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 .new-cards a:hover{
   font-size: 15px;
@@ -136,13 +150,194 @@ box-shadow: 0px 0px 20px black;
   text-decoration: underline;
 }
 
-.cards-banner-one .container{
-  width: 40%;
-  padding: 90px 0px;
-  color: rgb(255, 255, 255);
-}
-
 .cards-banner-one p, .cards-banner-one h2{
   margin: 10px 0px 20px 0px;
 
 }
+.titulo_dos{
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family:'Rubik Microbe', cursive;
+  color: #1ca6c9;
+}
+h3{
+  text-align: center;
+  justify-content: center;
+  color: #1ca6c9;
+  
+}
+hr{
+  width: 95%;
+  margin: auto;
+}
+
+/* comienzo botonera */
+
+.icono-menu{
+  margin: 0px 100px;
+  position: absolute;
+  z-index: 10;
+}
+
+.icono-menu img{
+  vertical-align: top;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.icono-menu img:hover{
+  width: 45px;
+  box-shadow: 5px 5px 5px rgb(12, 123, 197);
+  border-radius: 20px;
+
+
+}
+.cont-menu{
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(38, 161, 165, 0.40));
+  box-shadow: 2px 0px 5px 2px rgb(66, 189, 189);
+  width: 150px;
+  height: 585px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s ease;
+}
+
+/* estilos para agregar a javascript */
+.active{
+  transform: translate(-600px);
+}
+
+.cont-menu ul{
+  padding: 100px 0px 20px 0px;
+  list-style:none;
+}
+
+.cont-menu ul li{
+color: rgb(0, 0, 0);
+display:block;
+font-size: 25px;
+text-decoration: none;
+padding: 20px 50px;
+cursor: pointer;
+}
+
+
+.cont-menu ul li:hover{
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
+} 
+
+.red_social{
+  margin: 50px;
+  width: auto;
+  height: 150px;
+  background-color: #000000;
+}
+.red_social p{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+/* estilos de boton de redes */
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.links a{
+  margin: 0 30px;
+}
+.links a i{
+  font-size: 3rem;
+}
+
+/* links del footer */
+
+.footer-links{
+  background-color: #141414;
+  color: gray;
+  font-size: 12px;
+  /* padding 35px arriba y abajo y cero hacia los lados */
+  padding: 35px 0;
+}
+.footer-container{
+  /* display grid separa en columnas estilo grillas, grid-template-columns se encarga de dividirlas en la cantidad de columnas que le indicamos */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap es el espaciado entre columnas */
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer-container ul{
+  margin: 0 auto;
+}
+
+.footer-container ul li{
+  line-height: 2.8;
+}
+
+/* copy clase del footer */
+.copy{
+  color: gray;
+  background-color: #141414;
+
+  padding: 20px 0;
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+/* responsive para dispositivos pequeños */
+
+@media (max-width: 700px)
+{
+  *{
+    box-sizing: border-box;
+  }
+.new-cards{
+  grid-template-columns: repeat(3,1fr);
+  margin: 10px;
+}
+.cards-banner-one{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.red_social{
+  margin: 20px 20px;
+  width: 90%;
+  height: 150px;
+}
+.showcase{
+  height: 350px;
+}
+.cont-menu{
+  width: 120px;
+  height: 420px;
+}
+.cont-menu ul li{
+  font-size: 15px;
+  padding: 15px 30px ;
+}
+.icono-menu{
+    margin: 0px 50px;
+    position: absolute;
+    z-index: 10;
+  }
+  .icono-menu img{
+    width: 35px;
+  }
+  .icono-menu img:hover{
+    width: 37px;
+  }
+}
+
+
+    
